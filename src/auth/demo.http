@@ -1,0 +1,23 @@
+# POST http://localhost:3000/auth/login
+# content-type: application/json
+
+# {
+#     "username": "maria",
+#     "password": "guess"
+# };
+
+
+GET http://localhost:3000/user/all
+
+
+POST http://localhost:3000/user
+content-type: application/json
+
+{
+    "name": "Testing Another",
+    "password": "test",
+    "email": "testing@example.com",
+    "role": "member",
+    "mobile": "1234567890",
+    "apartment_number": "201"
+}
