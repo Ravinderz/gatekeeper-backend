@@ -7,17 +7,18 @@
 # };
 
 
-GET http://localhost:3000/user/all
+GET http://localhost:3000/visitor/visitor-stats/101
 
 
-POST http://localhost:3000/user
+POST http://localhost:3000/visitor/add-visitor
 content-type: application/json
 
 {
     "name": "Testing Another",
     "password": "test",
     "email": "testing@example.com",
-    "role": "member",
+    "role": "visitor",
     "mobile": "1234567890",
+    "purpose": "visiting flat for food delivery",
     "apartment_number": "201"
 }

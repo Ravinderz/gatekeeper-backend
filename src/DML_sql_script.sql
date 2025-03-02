@@ -20,7 +20,6 @@ create table visitor (
     `name` varchar(200) not null,
     `phone` varchar(200) not null,
     `apartment_number` varchar(50),
-    `email` varchar(200) not null,
     `purpose` varchar(4000) not null,
     `is_active` tinyint(1) not null default 1,
     `status` varchar(50) not null default 'pending',
@@ -30,8 +29,9 @@ create table visitor (
     `updated_by` varchar(200) not null default 'system'
 );
 
-insert into `visitor` (`name`, `phone`, `email`, `purpose`) values ('John Doe', '1234567890', 'tTQ5u@example.com', 'I want to visit the museum');
-insert into `visitor` (`name`, `phone`, `email`, `purpose`) values ('Nishant', '1234567890', 'test@example.com', 'I want to visit the museum');
+insert into `visitor` (`name`, `phone`, `apartment_number`, `purpose`) values ('John Doe', '1234567890', '101', 'I want to visit the museum');
+insert into `visitor` (`name`, `phone`, `apartment_number`, `purpose`, `status`) values ('Nishant', '1234567890', '101', 'I want to visit the museum','approved');
+insert into `visitor` (`name`, `phone`, `apartment_number`, `purpose`, `status`) values ('BlueDart Delivery', '1234567890', '101', 'I want to visit the museum','rejected');
 
 DROP TABLE IF EXISTS `user`;
 create table user (
